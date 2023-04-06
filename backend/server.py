@@ -22,7 +22,7 @@ def process_image():
     else:
         data = request.json
         image = data["image"]
-        print(image)
+#        print(image)
         prediction = inf.forward(image)
         output = {CLASSES[i]: prediction[i].item() for i in range(len(prediction))}
         return jsonify(output)

@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  backend:
+    build: .
+    container_name: backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: development
+  frontend:
+    build: .
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NODE_PATH=./src
+      - NEXT_TELEMETRY_DISABLED=1
