@@ -20,4 +20,4 @@ ENV FLASK_APP=server.py
 EXPOSE 5000
 
 # Start the Flask server
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["ls", "-la"]

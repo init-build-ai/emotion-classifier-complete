@@ -12,8 +12,8 @@ import sys
 
 class Inference:
     def __init__(self):
-        self.transform = transforms.Compose([transforms.CenterCrop(300), transforms.Resize(
-            size=(224, 224)), transforms.ToTensor()])  # transforms.CenterCrop(100,100)])
+        self.transform = transforms.Compose([transforms.CenterCrop(
+            224), transforms.ToTensor()])  # transforms.CenterCrop(100,100)])
         self.ort_session = onnxruntime.InferenceSession(
             "emotion_3080_epoch_128.onnx")
         self.img_shown = True

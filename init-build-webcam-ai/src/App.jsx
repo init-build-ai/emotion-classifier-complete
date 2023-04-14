@@ -18,7 +18,7 @@ function App() {
     useEffect(() => {
         const interval = setInterval(() => {
             processImage()
-        }, 200)
+        }, 1000)
         return () => clearInterval(interval)
     }, [])
 
